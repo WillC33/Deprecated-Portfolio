@@ -12,7 +12,7 @@ const carouselContainer = document.getElementById
 const slidesContainer = document.getElementById
 ('carousel-slides-container');
 
-let currentSlide = 0;
+var currentSlide = 0;
 const numSlides = slidesContainer.children.length;
 
 function handleNext() {

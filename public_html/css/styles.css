@@ -29,17 +29,17 @@ body {
 
 /* Text Styles */
 h1 {
-  font-family: glegoo;
+  font-family: glegoo, monospace;
   font-weight: bold;
   color: #495867;
   font-size: 48px;
   float: right; 
   padding-right: 5%;
-  text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
+  text-shadow: 0 1px 0 rgba(255,255,255,.3), 0 -1px 0 rgba(0,0,0,.7);
 }
 
 h2 {
-  font-family: glegoo;
+  font-family: glegoo monospace;
   font-weight: bold;
   color: #000;
   font-size: 44px;
@@ -50,27 +50,27 @@ h2 {
   padding-bottom: 50px;
 }
 h3 {
-  font-family: glegoo;
+  font-family: glegoo monospace;
   font-weight: bold;
   color: #fff; 
   font-size: 32px;
 }
 
 h4 {
-  font-family: glegoo;
+  font-family: glegoo monospace;
   font-weight: bold;
   color: #fff;
   font-size: 24px;
 }
 h5 {
-  font-family: glegoo;
+  font-family: glegoo monospace;
   font-weight: bold;
   color: #fff;
   font-size: 32px;
 }
 
 h6 {
-  font-family: glegoo;
+  font-family: glegoo monospace;
   font-weight: 300;
   color: #fff;
   font-size: 18px;
@@ -78,14 +78,13 @@ h6 {
 }
 
 p {
-  font-family: cantarell;
+  font-family: cantarell sans-serif;
   text-align: justify;
 }
 
 a:link {
-  font-family: cantarell;
+  font-family: cantarell sans-serif;
   color: white;
-  text-decoration: none;
   padding-left: 2rem;
   text-align: center;
   text-decoration: none;
@@ -93,25 +92,20 @@ a:link {
   transition: 0.8s;
 }
 .a-menu:visited {
-  font-family: cantarell;
+  font-family: cantarell sans-serif;
   color: white;
   text-decoration: none;
   padding-left: 2rem;
   text-align: center;
 }
 .a-menu:hover {
-  font-family: cantarell;
+  font-family: cantarell sans-serif;
   color: #C18C5D;
   text-decoration: none;
-  padding-left: 2rem;
-  text-align: center;
 }
 .a-menu:active {
-  font-family: cantarell;
   color: white;
   text-decoration: underline;
-  padding-left: 2rem;
-  text-align: center;
 }
 
 /* Menu styling */
@@ -120,7 +114,7 @@ a:link {
   padding-left: 40px;
   margin: -15px;
   background-color: #495867;
-  font-family: glegoo;
+  font-family: glegoo monospace;
   color: white;
 }
 
@@ -209,13 +203,13 @@ a:link {
 .grid-title {
   font-size: 24px;
   font-weight: bold;
-  font-family: cantarell;
+  font-family: cantarell monospace;
 }
 
 .grid-text {
   font-size: 18px;
   font-style: italic;
-  font-family: cantarell;
+  font-family: cantarell sans-serif;
   text-align: justify;
 }
 
@@ -228,7 +222,7 @@ a:link {
 
 /*Work Experience section*/
 .table {
-  font-family: cantarell;
+  font-family: cantarell sans-serif;
 }
 .exp-table-left {
   text-align: right;
@@ -268,7 +262,7 @@ a:link {
   padding: 0;
   margin: 0.5rem;
 
-  color: #495867;
+  color: #C18C5D;
 
   border-radius: 50%;
   border: none;
@@ -293,8 +287,36 @@ a:link {
   transition: transform 0.5s;
   transform: translateX(calc(-100% * var(--current-slide)));
 }
+
 .carousel-slide {
   flex: 0 0 100%;
+  /*this is a  carousel breaking property*/
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Add a container for the text */
+
+.carousel-text {
+  width: 80%;
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white; padding: 10px;
+  margin: auto;
+}
+
+/* Style the text */
+.carousel-text h4 {
+  margin: 0.5rem;
+  font-size: 16px;
+}
+
+.carousel-text p {
+  margin: 0.5rem;
+  font-size: 14px;
 }
 
 @media screen and (min-width: 768px) {
@@ -304,57 +326,20 @@ a:link {
   }
 }
 
-.slide-content {
-  width: 100%;
-  margin: auto;
-  padding: 5rem;
-
-  background-size: cover;
-  background-position: center;
-
-  font-size: 1.5rem;
-  color: white;
-  text-align: left;
-  background-size: contain;
-  background-repeat: no-repeat;
-  
-}
-
-.carousel-slide-text-box {
-display: block;
-background-color: rgba(0, 0, 0, 0.4);
-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.02);
-}
-
-.slide-content-1{
-  background-image: url(../images/williamcooke.png);
-}
-.slide-content-2{
-  background-image: url(../images/english.png);
-}
-.slide-content-3{
-  background-image: url(../images/vine.png);
-}
-.slide-content-4{
-  background-image: url(../images/bsefc.png);
-}
-.slide-content-5{
-  background-image: url(../images/Cover-photo.jpeg);
-}
 /*end of Carousel Section*/
 
 /*Get in touch section*/
 .contact-columns {
   columns: 2;
   width: 100%;
-  margin: 0px;
+  margin: 0;
 }
 .contact-column-buttons {
   width: 50%;
   padding: 10px;
   background-color: transparent;
   border-radius: 25px;
-  margin-top: 0px;
+  margin-top: 0;
   margin-left: 75px;
   margin-bottom: 100px;
 }
@@ -365,10 +350,7 @@ box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.02);
   padding: 10px 50px 100px;
   background-color: #C18C5D;
   border-radius: 25px;
-  margin-top: -100px;
-  margin-left: 75px;
-  margin-bottom: 100px;
-  margin-right: 30px;
+  margin: -100px 30px 100px 75px;
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
   overflow:hidden;
 }
@@ -401,7 +383,7 @@ box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.02);
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
 
   font-size: 18pt;
-  font-family: glegoo;
+  font-family: glegoo monospace;
   text-align: center;
   justify-content: center;
   text-decoration: underline;
