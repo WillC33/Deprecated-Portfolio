@@ -29,7 +29,7 @@ body {
 
 /* Text Styles */
 h1 {
-  font-family: glegoo, monospace;
+  font-family: glegoo;
   font-weight: bold;
   color: #495867;
   font-size: 48px;
@@ -39,7 +39,7 @@ h1 {
 }
 
 h2 {
-  font-family: glegoo monospace;
+  font-family: glegoo;
   font-weight: bold;
   color: #000;
   font-size: 44px;
@@ -50,27 +50,27 @@ h2 {
   padding-bottom: 50px;
 }
 h3 {
-  font-family: glegoo monospace;
+  font-family: glegoo;
   font-weight: bold;
   color: #fff; 
   font-size: 32px;
 }
 
 h4 {
-  font-family: glegoo monospace;
+  font-family: glegoo;
   font-weight: bold;
   color: #fff;
   font-size: 24px;
 }
 h5 {
-  font-family: glegoo monospace;
+  font-family: glegoo;
   font-weight: bold;
   color: #fff;
   font-size: 32px;
 }
 
 h6 {
-  font-family: glegoo monospace;
+  font-family: glegoo;
   font-weight: 300;
   color: #fff;
   font-size: 18px;
@@ -78,12 +78,12 @@ h6 {
 }
 
 p {
-  font-family: cantarell sans-serif;
+  font-family: cantarell;
   text-align: justify;
 }
 
 a:link {
-  font-family: cantarell sans-serif;
+  font-family: cantarell;
   color: white;
   padding-left: 2rem;
   text-align: center;
@@ -92,14 +92,14 @@ a:link {
   transition: 0.8s;
 }
 .a-menu:visited {
-  font-family: cantarell sans-serif;
+  font-family: cantarell;
   color: white;
   text-decoration: none;
   padding-left: 2rem;
   text-align: center;
 }
 .a-menu:hover {
-  font-family: cantarell sans-serif;
+  font-family: cantarell;
   color: #C18C5D;
   text-decoration: none;
 }
@@ -114,7 +114,7 @@ a:link {
   padding-left: 40px;
   margin: -15px;
   background-color: #495867;
-  font-family: glegoo monospace;
+  font-family: glegoo;
   color: white;
 }
 
@@ -203,13 +203,13 @@ a:link {
 .grid-title {
   font-size: 24px;
   font-weight: bold;
-  font-family: cantarell monospace;
+  font-family: cantarell ;
 }
 
 .grid-text {
   font-size: 18px;
   font-style: italic;
-  font-family: cantarell sans-serif;
+  font-family: cantarell;
   text-align: justify;
 }
 
@@ -222,7 +222,7 @@ a:link {
 
 /*Work Experience section*/
 .table {
-  font-family: cantarell sans-serif;
+  font-family: cantarell;
 }
 .exp-table-left {
   text-align: right;
@@ -383,7 +383,7 @@ a:link {
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
 
   font-size: 18pt;
-  font-family: glegoo monospace;
+  font-family: glegoo;
   text-align: center;
   justify-content: center;
   text-decoration: underline;
