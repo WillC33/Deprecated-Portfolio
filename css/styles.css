@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --purple: #495867;
   --orange: #C18C5D;
@@ -17,7 +22,7 @@ body {
 .spacer-large {
   margin-top: 20%;
 }
-@media screen and(max-width: 600px){
+@media screen and(min-width: 600px){
   #spacer-mob{
     visibility: hidden;
   }
