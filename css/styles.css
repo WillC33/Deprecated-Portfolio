@@ -1,9 +1,8 @@
-@charset "UTF-8";
-
-/*Palette:
-purple = color: #495867;
-#C18C5D = orange
-#ECC8AF = pale yellow*/
+:root {
+  --purple: #495867;
+  --orange: #C18C5D;
+  --yellow: #ECC8AF;
+}
 
 html,
 body {
@@ -12,74 +11,113 @@ body {
 }
 
 .spacer-small {
-  margin-top: 100px;
+  margin-top: 10%;
 }
 
 .spacer-large {
-  margin-top: 200px;
+  margin-top: 20%;
 }
-
-.yellow-bg {
-  background-color: #ECC8AF;
+@media screen and(max-width: 600px){
+  #spacer-mob{
+    visibility: hidden;
+  }
 }
 
 .purple-bg {
-  background-color: #495867;
+  background-color: var(--purple);
 }
 
 /* Text Styles */
-h1 {
+
+h1, h2, h3, h4 {
   font-family: glegoo;
   font-weight: bold;
-  color: #495867;
+}
+h1 {
+  color: var(--purple);
   font-size: 48px;
-  float: right; 
+  float: right;
   padding-right: 5%;
   text-shadow: 0 1px 0 rgba(255,255,255,.3), 0 -1px 0 rgba(0,0,0,.7);
 }
 
 h2 {
-  font-family: glegoo;
-  font-weight: bold;
   color: #000;
   font-size: 44px;
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  margin: 50px 0;
+  padding: 50px 0;
 }
 h3 {
-  font-family: glegoo;
-  font-weight: bold;
-  color: #fff; 
+  color: #fff;
   font-size: 32px;
 }
 
 h4 {
-  font-family: glegoo;
-  font-weight: bold;
   color: #fff;
   font-size: 24px;
-}
-h5 {
-  font-family: glegoo;
-  font-weight: bold;
-  color: #fff;
-  font-size: 32px;
-}
-
-h6 {
-  font-family: glegoo;
-  font-weight: 300;
-  color: #fff;
-  font-size: 18px;
-  text-align: center;
 }
 
 p {
   font-family: cantarell;
   text-align: justify;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  h4 {
+    font-size: 14px;
+  }
+}
+
+/* Add media query for screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    /* Change padding and margin for smaller screens */
+    padding-top: 10px;
+    padding-left: 20px;
+    margin: 0;
+  }
+  a.a-menu {
+    /* Change padding for smaller screens */
+    padding-left: 1rem;
+  }
+}
+
+/* Add media query for screens smaller than 425px */
+@media only screen and (max-width: 425px) {
+  .navbar {
+    /* Change font size for smaller screens */
+    font-size: 14px;
+  }
+  a.a-menu {
+    /* Change padding for smaller screens */
+    padding-left: 0.5rem;
+  }
 }
 
 a:link {
@@ -91,6 +129,7 @@ a:link {
   text-decoration-color: transparent;
   transition: 0.8s;
 }
+
 .a-menu:visited {
   font-family: cantarell;
   color: white;
@@ -98,11 +137,13 @@ a:link {
   padding-left: 2rem;
   text-align: center;
 }
+
 .a-menu:hover {
   font-family: cantarell;
-  color: #C18C5D;
+  color: var(--orange);
   text-decoration: none;
 }
+
 .a-menu:active {
   color: white;
   text-decoration: underline;
@@ -113,14 +154,19 @@ a:link {
   padding-top: 20px;
   padding-left: 40px;
   margin: -15px;
-  background-color: #495867;
+  background-color: var(--purple);
   font-family: glegoo;
   color: white;
 }
 
 /*  hero image */
 .hero-image {
-  background-image:linear-gradient(to bottom right, rgba(61, 64, 91, 0.3), rgba(224, 122, 95, 0.2)), url("../images/Cover-photo.jpeg");
+  background-image: linear-gradient(
+          to bottom right,
+          rgba(61, 64, 91, 0.3),
+          rgba(224, 122, 95, 0.2)
+  ),
+  url("../images/Cover-photo.jpeg");
 
   /* Set a specific height */
   height: 968px;
@@ -157,6 +203,15 @@ a:link {
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.02);
 }
 
+/* Responsive layout - make column take up full width on small screens */
+@media only screen and (max-width: 875px) {
+  .column {
+    width: 70%;
+    box-sizing: content-box;
+    margin-left: 5%;
+  }
+}
+
 .title-column {
   float: right;
   width: 100%;
@@ -171,17 +226,8 @@ a:link {
   background-color: transparent;
 }
 
-/* Responsive layout - 600px */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
-
-/* Software Competencies grid layout*/
-
 .icon {
-  color :#495867;
+  color: var(--purple);
 }
 
 .grid-container {
@@ -194,16 +240,17 @@ a:link {
 
 .grid-container > div {
   border-radius: 2rem;
-  text-align: center;
+  min-height: 250px;
   padding: 30px 0;
   margin: 0.5%;
+  text-align: center;
   font-size: 30px;
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.02);
 }
 .grid-title {
   font-size: 24px;
   font-weight: bold;
-  font-family: cantarell ;
+  font-family: cantarell;
 }
 
 .grid-text {
@@ -213,14 +260,24 @@ a:link {
   text-align: justify;
 }
 
-/* Responsive layout - 600px */
-@media screen and (max-width: 600px) {
+/* Responsive layout - make grid take up full width on small screens */
+@media only screen and (max-width: 600px) {
   .grid-container {
     width: 100%;
   }
+  .grid-container {
+    grid-template-columns: 100%;
+  }
 }
 
-/*Work Experience section*/
+/* Responsive layout - make grid have 2 columns on medium screens */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+/* Work Experience section */
 .table {
   font-family: cantarell;
 }
@@ -243,8 +300,20 @@ a:link {
   font-weight: bold;
   font-size: 14pt;
 }
-/*end of Work Experience section*/
 
+/* Responsive layout - make font sizes smaller on small screens */
+@media only screen and (max-width: 600px) {
+  .exp-table-left {
+    font-size: 14pt;
+  }
+  .exp-table-right {
+    font-size: 12pt;
+  }
+  .exp-table-date {
+    font-size: 12pt;
+  }
+}
+/* end of Work Experience section */
 /*Carousel Section*/
 .carousel {
   --current-slide: 0;
@@ -262,7 +331,7 @@ a:link {
   padding: 0;
   margin: 0.5rem;
 
-  color: #C18C5D;
+  color: var(--orange);
 
   border-radius: 50%;
   border: none;
@@ -319,6 +388,7 @@ a:link {
   font-size: 14px;
 }
 
+/* Make the carousel buttons larger on larger screens */
 @media screen and (min-width: 768px) {
   .carousel-button {
     font-size: 2rem;
@@ -326,9 +396,14 @@ a:link {
   }
 }
 
-/*end of Carousel Section*/
+/* Make the carousel responsive on smaller screens */
+@media screen and (max-width: 767px) {
+  .carousel {
+    width: 100%;
+  }
+}
 
-/*Get in touch section*/
+/*end of Carousel Section*/
 .contact-columns {
   columns: 2;
   width: 100%;
@@ -348,7 +423,7 @@ a:link {
   float: right;
   width: 100%;
   padding: 10px 50px 100px;
-  background-color: #C18C5D;
+  background-color: var(--orange);
   border-radius: 25px;
   margin: -100px 30px 100px 75px;
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
@@ -373,10 +448,10 @@ a:link {
   padding: 10px 50px 10px 50px;
   overflow: hidden;
   white-space: nowrap;
-  
+
 
   margin: 30px 30px 30px 30px ;
-  background-color: #C18C5D;
+  background-color: var(--orange);
 
   border: transparent;
   border-radius: 15px;
@@ -397,4 +472,21 @@ a:link {
   cursor: pointer;
   transition: 0.9s;
 }
+
+/* Make the contact columns and buttons responsive on smaller screens */
+@media screen and (max-width: 767px) {
+  .contact-columns {
+    columns: 1;
+  }
+  .contact-column-buttons {
+    width: 100%;
+    margin: 0;
+  }
+  .contact-button {
+    margin: 30px 0;
+  }
+}
+
 /*end of Get in touch section*/
+
+
