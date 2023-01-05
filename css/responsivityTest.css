@@ -234,9 +234,12 @@ a:link {
 }
 
 /* Responsive layout - make column take up full width on small screens */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 875px) {
     .column {
-        width: 100%;
+        width: 70%;
+        margin: auto;
+        box-sizing: content-box;
+        margin-left: 5%;
     }
 }
 
